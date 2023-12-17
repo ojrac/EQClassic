@@ -3,7 +3,7 @@
 
 #ifdef EMBPERL
 
-#include "logger.h"
+#include "Logger.h"
 #include "entity.h"
 #include "npc.h"
 #include "mob.h"

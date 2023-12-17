@@ -32,7 +32,7 @@ The code was ported over from EQEMU 7.0
 
 #ifdef EMBPERL
 
-#include "logger.h"
+#include "Logger.h"
 #include <cstdio>
 #include <cstdarg>
 #include <vector>

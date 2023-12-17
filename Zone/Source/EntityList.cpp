@@ -14,7 +14,7 @@
 #endif
 
 #include "entity.h"
-#include "entitylist.h"
+#include "EntityList.h"
 #include "client.h"
 #include "npc.h"
 #include "worldserver.h"

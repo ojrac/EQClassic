@@ -8,7 +8,7 @@ The code was ported over from EQEMU 7.0
 
 #include "features.h"
 #ifdef EMBPERL
-#include "logger.h"
+#include "Logger.h"
 #include "embperl.h"
 
 #include "perlpacket.h"

@@ -21,7 +21,7 @@
 	#pragma warning(disable:4786)
 	// Quagmire: Dont know why the one in debug.h doesnt work, but it doesnt.
 #endif
-#include "logger.h"
+#include "Logger.h"
 /*#ifdef _CRTDBG_MAP_ALLOC
 	#undef new
 	#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)

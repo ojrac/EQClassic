@@ -50,7 +50,7 @@ And then at then end of embparser.cpp, add:
 
 */
 
-#include "logger.h"
+#include "Logger.h"
 #include "entity.h"
 #include "groups.h"
 #include "client.h"

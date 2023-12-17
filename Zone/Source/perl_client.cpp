@@ -9,7 +9,7 @@
 
 #include "features.h"
 #ifdef EMBPERL
-#include "logger.h"
+#include "Logger.h"
 #include "embperl.h"
 
 #include "client.h"

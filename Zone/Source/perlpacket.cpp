@@ -8,7 +8,7 @@ or restart the client.
 The code was ported over from EQEMU 7.0
 */
 
-#include "logger.h"
+#include "Logger.h"
 #include <stdlib.h>
 #include "perlpacket.h"
 #include "client.h"

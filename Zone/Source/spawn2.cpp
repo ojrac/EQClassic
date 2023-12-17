@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include "spawn2.h"
 #include "entity.h"
-#include "entitylist.h"
+#include "EntityList.h"
 #include "npc.h"
 #include "zone.h"
 #include "spawngroup.h"

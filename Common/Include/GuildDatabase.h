@@ -2,7 +2,7 @@
 #define GUILDDATABASE_H
 
 #include "GuildNetwork.h"
-#include "Database.h"
+#include "database.h"
 
 using namespace EQC::Common;
 using namespace EQC::Common::Network;

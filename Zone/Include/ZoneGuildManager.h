@@ -23,7 +23,7 @@
 #include "GuildDatabase.h"
 #include "PacketUtils.hpp"
 
-#include "entitylist.h"
+#include "EntityList.h"
 
 namespace EQC
 {

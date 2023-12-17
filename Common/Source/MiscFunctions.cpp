@@ -8,8 +8,8 @@
 
 #include "MiscFunctions.h"
 #include "timer.h"
-#include "../../zone/include/entity.h"
-#include "../../zone/include/entitylist.h"
+#include "../../Zone/Include/entity.h"
+#include "../../Zone/Include/EntityList.h"
 #include <cstring>
 #ifdef WIN32
 	#include <io.h>
