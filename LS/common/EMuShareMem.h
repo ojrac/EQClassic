@@ -88,7 +88,7 @@ public:
 	LoadEMuShareMemDLL();
 	~LoadEMuShareMemDLL();
 
-	inline bool	Loaded() { return ((hDLL != NULL) && !(hDLL <= 0)); }
+	inline bool	Loaded() { return ((hDLL != NULL) && !(hDLL == nullptr)); }
 	bool	Load();
 	void	Unload();
 
