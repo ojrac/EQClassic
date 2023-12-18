@@ -17,6 +17,7 @@ using namespace std;
 	#define strcasecmp  _stricmp
 #else
 	#include <sys/types.h>
+	#include <sys/stat.h>
 	#include <unistd.h>
 	#include <stdarg.h>
 #endif
@@ -106,7 +107,15 @@ bool EQCLog::open(LogIDs id) {
 #endif
 	
 	// Create dir, no matter if it exist or not
+#ifdef WIN32
 	CreateDirectory(TEXT("logs"),NULL);
+#else
+	struct stat st = {0};
+	if (stat("logs", &st) == -1)
+	{
+		mkdir("logs", 0755);
+	}
+#endif
 
     fp[id] = fopen(filename, "a");
     if (!fp[id]) {

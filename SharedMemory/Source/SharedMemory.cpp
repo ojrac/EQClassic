@@ -12,17 +12,21 @@
 using namespace EQC::Common;
 using namespace std;
 
+#ifdef WIN32
 HINSTANCE	SharedMemory::hSharedDLL = NULL;
 HANDLE		SharedMemory::hSharedMapObject = NULL;
 LPVOID		SharedMemory::lpvSharedMem = NULL;
+#endif
 
 ////////////////////////////////////////////////////////////
 
 SharedMemory::SharedMemory()
 {
+#ifdef WIN32
 	hSharedDLL = NULL;
 	hSharedMapObject = NULL;
 	lpvSharedMem = NULL;
+#endif
 }
 
 ////////////////////////////////////////////////////////////
@@ -35,6 +39,7 @@ SharedMemory::~SharedMemory()
 
 bool SharedMemory::Load()
 {
+#ifdef WIN32
 	bool			firstInit;
 	int				errn = NULL;
 	const LPCWSTR	SHMEMNAME		= L"EQCSharedMem";
@@ -92,6 +97,10 @@ bool SharedMemory::Load()
 		EQC::Common::PrintF(CP_SHAREDMEMORY,"SharedMemory.dll failed to load.\n");
 		return false;
 	}
+#else
+	// TODO: Something reasonable
+	return true;
+#endif
 }
 
 ////////////////////////////////////////////////////////////
@@ -109,7 +118,11 @@ uint32 SharedMemory::CalcSMSize(){
 
 bool SharedMemory::isLoaded()
 {
+#ifdef WIN32
 	return hSharedDLL != NULL && hSharedMapObject != NULL && lpvSharedMem != NULL;
+#else
+	return true;
+#endif
 }
 
 ////////////////////////////////////////////////////////////
@@ -119,6 +132,7 @@ void SharedMemory::Unload()
 	if (isLoaded()) return;
 
 	UnloadItems();
+#ifdef WIN32
 	// Unmap shared memory from the process's address space
 	UnmapViewOfFile(lpvSharedMem); 
 	lpvSharedMem = NULL;
@@ -130,11 +144,14 @@ void SharedMemory::Unload()
 	// Close the DLL handle.
 	FreeLibrary(hSharedDLL);
 	safe_delete(hSharedDLL);
+#endif
 }
 
 ////////////////////////////////////////////////////////////
 
+#ifdef WIN32
 SharedMemory::ShMemData_Struct* SharedMemory::getPtr()
 {
 	return (ShMemData_Struct*)SharedMemory::lpvSharedMem;
 }
+#endif

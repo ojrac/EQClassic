@@ -25,8 +25,11 @@
 */
 #ifndef TIMER_H
 #define TIMER_H
+
+#ifdef WIN32
 #include <windows.h>
 #include <winsock.h>
+#endif
 
 #include "types.h"
 

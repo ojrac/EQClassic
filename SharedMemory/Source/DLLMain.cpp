@@ -5,6 +5,7 @@
 // ***************************************************************
 // -Cofruben: initial release on 31/08/09.
 // ***************************************************************
+#if WIN32
 #include <windows.h>
 #include "SharedMemory.hpp"
 
@@ -25,3 +26,4 @@ BOOL WINAPI DllMain(
 	}
 	return TRUE;
 }
+#endif

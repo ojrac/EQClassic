@@ -23,6 +23,9 @@
 #include "classes.h"
 #include "inventory.h"
 #include "SharedMemory.hpp"
+#ifndef WIN32
+#include "unix.h"
+#endif
 
 using namespace std;
 using namespace EQC::Common;

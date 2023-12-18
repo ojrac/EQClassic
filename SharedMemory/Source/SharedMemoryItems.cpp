@@ -9,6 +9,9 @@
 #include "EQCException.hpp"
 #include "itemtypes.h"
 #include "SharedMemory.hpp"
+#ifndef WIN32
+#include "unix.h"
+#endif
 
 
 bool SharedMemory::LoadItems(){

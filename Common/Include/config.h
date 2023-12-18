@@ -7,8 +7,7 @@
 // ***************************************************************
 
 #ifndef CONFIG_H
-	#define CONFIG_H
-#endif
+#define CONFIG_H
 
 #include <stdio.h>
 
@@ -63,6 +62,7 @@
 	#define strcasecmp	_stricmp
 #if (_MSC_VER < 1500)
 	#define vsnprintf	_vsnprintf
+#endif
 #endif
 
 // Name of the Shared Memory library

@@ -7,7 +7,12 @@
 // ***************************************************************
 #ifndef SHAREDMEMORY_H
 #define SHAREDMEMORY_H
+#ifdef WIN32
 #include <windows.h>
+#define EXPORT __declspec(dllexport)
+#else
+#define EXPORT __attribute__((visibility("default")))
+#endif
 #include "EQCUtils.hpp"
 #include "eq_packet_structs.h"
 #include "types.h"
@@ -15,7 +20,7 @@ using namespace std;
 
 const uint32	MAXITEMID = 33000;
 
-class __declspec(dllexport) SharedMemory 
+class EXPORT SharedMemory 
 {
 public:
 	SharedMemory();
@@ -33,18 +38,22 @@ public:
 	static Item_Struct*	getItem(uint32 id);
 	static int			getMaxItem();
 
+#ifdef WIN32
 	static void setDLL(HINSTANCE aDll) {hSharedDLL = aDll; }
 	static void setMemPtr(LPVOID alpvMem) {lpvSharedMem = alpvMem; }
 	static void setMapObject(HANDLE ahMapObject) {hSharedMapObject = ahMapObject; }
+#endif
 
 private:
 	static bool					LoadItems();
 	static void					UnloadItems();
 	static ShMemData_Struct*	getPtr();
 	static uint32				CalcSMSize();
+#ifdef WIN32
 	static HINSTANCE			hSharedDLL;
 	static HANDLE				hSharedMapObject;  // handle to file mapping
 	static LPVOID				lpvSharedMem;      // pointer to shared memory
+#endif
 };
 
 

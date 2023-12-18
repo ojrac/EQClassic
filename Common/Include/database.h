@@ -11,8 +11,10 @@
 
 #define AUTHENTICATION_TIMEOUT	60
 
+#ifdef WIN32
 #include <windows.h>
 #include <winsock.h>
+#endif
 #include <mysql.h>
 #include <queue>
 
