@@ -247,7 +247,9 @@ public:
 	virtual ~EQNetworkConnection();
 
 	// Functions for outgoing connections
+#if 0
 	bool			OpenSock(char* irAddress, int16 irPort, char* errbuf = 0);
+#endif
 	bool			OpenSock(int32 irIP, int16 irPort);
 	void			CloseSock();
 

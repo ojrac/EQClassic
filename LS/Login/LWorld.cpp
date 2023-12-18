@@ -1301,11 +1301,15 @@ void LWorldList::ConnectUplink() {
 	if (net.GetLoginMode() == Slave) {
 		if (!OutLink->Connected() && net.GetMasterAddress()[0] != 0) {
 			char errbuf[TCPConnection_ErrorBufferSize];
+#if 0
 			int32 destip = ResolveIP(net.GetMasterAddress(), errbuf);
-			if (destip == 0) {
+			if (destip == 0)
+#endif
+			{
 				cout << "LWorldList::ConnectUplink failed: '" << errbuf << "'" << endl;
 				return;
 			}
+#if 0
 			else {
 				if (OutLink->Connect(destip, net.GetUplinkPort(), errbuf)) {
 					cout << "Connected to Master Login server: " << net.GetMasterAddress() << ":" << net.GetUplinkPort() << endl;
@@ -1327,6 +1331,7 @@ void LWorldList::ConnectUplink() {
 					return;
 				}
 			}
+#endif
 		}
 	}
 	else {
@@ -1386,6 +1391,7 @@ void LWorldList::AddPeer(LWorld* iLogin) {
 	peerlist.Append(pi);
 }
 
+#if 0
 void LWorldList::AddPeer(char* iAddress, bool iFromINI) {
 	if (net.GetLoginMode() != Mesh)
 		return;
@@ -1399,6 +1405,7 @@ void LWorldList::AddPeer(char* iAddress, bool iFromINI) {
 	}
 	AddPeer(tmpIP, tmpPort, iFromINI);
 }
+#endif
 
 void LWorldList::RemovePeer(LWorld* iLogin) {
 	LinkedListIterator<PeerInfo*> iterator(peerlist);

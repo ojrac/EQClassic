@@ -396,6 +396,7 @@ bool NetConnection::ReadMiniLoginAccounts() {
 			cout << "Error in MiniLoginConfig.ini on line #" << (i+1) << ": Password too long" << endl;
 			continue;
 		}
+#if 0
 		int32 tmpIP = ResolveIP(LineSep.arg[0]);
 		cout << "test";
 		if (tmpIP) {
@@ -405,7 +406,9 @@ bool NetConnection::ReadMiniLoginAccounts() {
 			strcpy(MiniLoginAccounts[arrayindex].password, LineSep.arg[2]);
 			arrayindex++;
 		}
-		else {
+		else
+#endif
+		{
 			cout << "Error in MiniLoginConfig.ini on line #" << (i+1) << ": \'" << LineSep.arg[0] << "\' isnt a recognizable ip or hostname." << endl;
 			continue;
 		}

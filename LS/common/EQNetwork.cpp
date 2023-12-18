@@ -526,6 +526,7 @@ void EQNetworkConnection::Close() {
 	MInQueueLock.unlock();
 }
 
+#if 0
 bool EQNetworkConnection::OpenSock(char* irAddress, int16 irPort, char* errbuf) {
 	if (ConnectionType != Outgoing) {
 		ThrowError("EQNetworkConnection::Connect() called on an incoming connection!");
@@ -537,6 +538,7 @@ bool EQNetworkConnection::OpenSock(char* irAddress, int16 irPort, char* errbuf) 
 	}
 	return OpenSock(tmp, irPort);
 }
+#endif
 
 bool EQNetworkConnection::OpenSock(int32 irIP, int16 irPort) {
 	if (ConnectionType != Outgoing) {

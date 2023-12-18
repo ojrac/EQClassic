@@ -111,7 +111,9 @@ public:
 	virtual ~TCPConnection();
 
 	// Functions for outgoing connections
+#if 0
 	bool			Connect(const char* irAddress, int16 irPort, char* errbuf = 0);
+#endif
 	bool			Connect(int32 irIP, int16 irPort, char* errbuf = 0);
 	void			AsyncConnect(const char* irAddress, int16 irPort);
 	void			AsyncConnect(int32 irIP, int16 irPort);

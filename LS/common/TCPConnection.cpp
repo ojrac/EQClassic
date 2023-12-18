@@ -572,6 +572,7 @@ void TCPConnection::AsyncConnect(int32 irIP, int16 irPort) {
 	return;
 }
 
+#if 0
 bool TCPConnection::Connect(const char* irAddress, int16 irPort, char* errbuf) {
 	if (errbuf)
 		errbuf[0] = 0;
@@ -588,6 +589,7 @@ bool TCPConnection::Connect(const char* irAddress, int16 irPort, char* errbuf) {
 	}
 	return Connect(tmpIP, irPort, errbuf);
 }
+#endif
 
 bool TCPConnection::Connect(int32 in_ip, int16 in_port, char* errbuf) {
 	if (errbuf)
@@ -721,8 +723,10 @@ bool TCPConnection::Process() {
 	if (!CheckNetActive()) {
 		if (ConnectionType == Outgoing) {
 			if (GetAsyncConnect()) {
+#if 0
 				if (charAsyncConnect)
 					rIP = ResolveIP(charAsyncConnect);
+#endif
 				Connect(rIP, rPort);
 			}
 		}

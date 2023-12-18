@@ -4,6 +4,7 @@
 
 #include "../common/eq_packet_structs.h"
 
+#if 0
 int main(int argc, char** argv)
 {
 	MYSQL mysql;
@@ -66,4 +67,4 @@ memset(&item2, 0, sizeof(item));
 		}
 	}
 }
-
+#endif

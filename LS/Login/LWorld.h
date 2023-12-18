@@ -127,7 +127,9 @@ public:
 
 	void	AddPeer(int32 iIP, int16 iPort, bool iFromINI = false);
 	void	AddPeer(LWorld* iLogin);
+#if 0
 	void	AddPeer(char* iAddress, bool iFromINI = false);
+#endif
 	void	RemovePeer(LWorld* iLogin);
 	sint8	ConnectPeer(LWorld* iLogin);
 
