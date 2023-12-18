@@ -1398,6 +1398,7 @@ void LWorldList::AddPeer(char* iAddress, bool iFromINI) {
 
 	int32 tmpIP = 0;
 	int16 tmpPort = 0;
+	constexpr size_t ERRBUF_SIZE = 65535;
 	char errbuf[ERRBUF_SIZE] = "";
 	if (!ParseAddress(iAddress, &tmpIP, &tmpPort, errbuf)) {
 		cout << "Error: AddPeer(char*): !ParseAddress: " << errbuf << endl;
