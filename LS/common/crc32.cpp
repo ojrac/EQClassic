@@ -133,85 +133,10 @@ uint32 CRC32::Update(const int8* buf, uint32 bufsize, uint32 dwCrc32) {
 	
 	return dwCrc32;
 }
-#elif defined(i386)
-		register uint32  _crc32 __asm ( "ax" );
-		_crc32 = crc32;
-
-__asm __volatile (
-		"xorl	%%ebx, %%ebx\n"
-		"movl	%1, %%esi\n" 
-		"movl	%2, %%ecx\n" 
-		"movl	$CRC32Table, %%edi\n"
-		"shrl	$2, %%ecx\n"
-		"jz	1f\n"
-
-		".align 4\n"
-		"0:\n"
-		"movb	%%al, %%bl\n"
-		"movl	(%%esi), %%edx\n"
-		"shrl	$8, %%eax\n"
-		"xorb	%%dl, %%bl\n"
-		"shrl	$8, %%edx\n"
-		"xorl	(%%edi,%%ebx,4), %%eax\n"
-
-		"movb	%%al, %%bl\n"
-		"shrl	$8, %%eax\n"
-		"xorb	%%dl, %%bl\n"
-		"shrl	$8, %%edx\n"
-		"xorl	(%%edi,%%ebx,4), %%eax\n"
-
-		"movb	%%al, %%bl\n"
-		"shrl	$8, %%eax\n"
-		"xorb	%%dl, %%bl\n"
-		"movb	%%dh, %%dl\n" 
-		"xorl	(%%edi,%%ebx,4), %%eax\n"
-
-		"movb	%%al, %%bl\n"
-		"shrl	$8, %%eax\n"
-		"xorb	%%dl, %%bl\n"
-		"addl	$4, %%esi\n"
-		"xorl	(%%edi,%%ebx,4), %%eax\n"
-
-		"decl	%%ecx\n"
-		"jnz	0b\n"
-
-		"1:\n"
-		"movl	%2, %%ecx\n"
-		"andl	$3, %%ecx\n"
-		"jz	2f\n"
-
-		"movb	%%al, %%bl\n"
-		"shrl	$8, %%eax\n"
-		"xorb	(%%esi), %%bl\n"
-		"xorl	(%%edi,%%ebx,4), %%eax\n"
-
-		"decl	%%ecx\n"
-		"jz	2f\n"
-
-		"movb	%%al, %%bl\n"
-		"shrl	$8, %%eax\n"
-		"xorb	1(%%esi), %%bl\n"
-		"xorl	(%%edi,%%ebx,4), %%eax\n"
-
-		"decl	%%ecx\n"
-		"jz	2f\n"
-
-		"movb	%%al, %%bl\n"
-		"shrl	$8, %%eax\n"
-		"xorb	2(%%esi), %%bl\n"
-		"xorl	(%%edi,%%ebx,4), %%eax\n"
-	"2:\n"
-		:
-		: "a" (_crc32), "g" (buf), "g" (bufsize)
-		: "ax", "bx", "cx", "dx", "si", "di"
-	);
-	
-	return _crc32;
-}
 #else
 	for(uint32 i=0; i < bufsize; i++)
-		Calc(buf[i], crc32);
-	return crc32;
+		Calc(buf[i], dwCrc32);
+	return dwCrc32;
 }
 #endif
 
