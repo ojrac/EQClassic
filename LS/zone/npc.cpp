@@ -16,7 +16,7 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 	  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 #include "../common/debug.h"
-#include <iostream.h>
+#include <iostream>
 #include <math.h>
 #include "../common/moremath.h"
 #include <stdio.h>
@@ -38,6 +38,8 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 #include "spdat.h"
 #include "groups.h"
 #include "spawngroup.h"
+
+using namespace std;
 
 //#define SPELLQUEUE //Use only if you want to be spammed by spell testing
 

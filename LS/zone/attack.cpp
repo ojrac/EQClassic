@@ -21,7 +21,7 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 #include <string.h>
 #include <stdio.h>
 #include <math.h>
-#include <iostream.h>
+#include <iostream>
 
 #include "client.h"
 #include "npc.h"
@@ -33,6 +33,8 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 #include "spdat.h"
 #include "zone.h"
 #include "groups.h"
+
+using namespace std;
 
 #ifdef WIN32
 #define snprintf	_snprintf

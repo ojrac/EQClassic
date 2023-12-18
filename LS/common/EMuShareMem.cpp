@@ -1,7 +1,9 @@
-#include <iostream.h>
+#include <iostream>
 #include "../common/types.h"
 
 #include "EMuShareMem.h"
+
+using namespace std;
 
 #ifdef WIN32
 	#define snprintf	_snprintf

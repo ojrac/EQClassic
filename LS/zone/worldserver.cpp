@@ -16,10 +16,10 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 	  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 #include "../common/debug.h"
-#include <iostream.h>
+#include <iostream>
 #include <string.h>
 #include <stdio.h>
-#include <iomanip.h>
+#include <iomanip>
 #include <time.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -48,6 +48,8 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 #include "../common/packet_functions.h"
 #include "PlayerCorpse.h"
 #include "../common/md5.h"
+
+using namespace std;
 
 extern Database database;
 extern EntityList    entity_list;

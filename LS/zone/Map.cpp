@@ -18,9 +18,12 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 #include "../common/debug.h"
 #include <stdio.h>
 #include <string.h>
-#include <iostream.h>
+#include <iostream>
 
 #include "map.h"
+
+using namespace std;
+
 #ifdef WIN32
 #define snprintf	_snprintf
 #endif

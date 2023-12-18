@@ -16,7 +16,7 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 	  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 #include "../common/debug.h"
-#include <iostream.h>
+#include <iostream>
 
 #include "doors.h"
 #include "entity.h"
@@ -24,6 +24,8 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 #include "../common/database.h"
 #include "../common/packet_functions.h"
 #include "../common/packet_dump.h"
+
+using namespace std;
 
 extern Database database;
 extern EntityList entity_list;

@@ -20,8 +20,10 @@
 #include "../common/eqtime.h"
 #include "../common/eq_packet_structs.h"
 #include <memory.h>
-#include <iostream.h>
-#include <fstream.h>
+#include <iostream>
+#include <fstream>
+
+using namespace std;
 
 #define EQT_VERSION 1000
 

@@ -16,8 +16,8 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 	  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 #include "../common/debug.h"
-#include <iostream.h>
-#include <iomanip.h>
+#include <iostream>
+#include <iomanip>
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -57,6 +57,7 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 #include "../common/ZoneNumbers.h"
 #include "../common/moremath.h"
 
+using namespace std;
 
 extern volatile bool RunLoops;
 extern Database database;

@@ -1,6 +1,9 @@
-#include <iostream.h>
+#include <iostream>
 #include "entity.h"
 #include <stdlib.h>
+
+using namespace std;
+
 extern Database database;
 extern EntityList entity_list;
 

@@ -17,13 +17,16 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 */
 #include "../common/debug.h"
 #include <stdio.h>
-#include <iostream.h>
+#include <iostream>
 #include <stdlib.h>
 #include "npc.h"
 #include "../common/database.h"
 #ifdef WIN32
 #define snprintf	_snprintf
 #endif
+
+using namespace std;
+
 class NPC;
 extern Database database;
 #ifdef SHAREMEM

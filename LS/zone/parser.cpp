@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include <iostream.h>
+#include <iostream>
 
 #include "../common/debug.h"
 #include "client.h"
@@ -25,6 +25,8 @@
 #include "event_codes.h"
 #include <time.h>
 #include "basic_functions.h"
+
+using namespace std;
 
 extern Database database;
 extern Zone* zone;

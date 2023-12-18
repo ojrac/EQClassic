@@ -16,10 +16,10 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 #include "../common/debug.h"
-#include <iostream.h>
-#include <iomanip.h>
+#include <iostream>
+#include <iomanip>
 #include <stdio.h>
-#include <fstream.h>
+#include <fstream>
 #include <time.h>
 #include <string.h>
 
@@ -34,6 +34,8 @@
 
 #include "EQNetwork.h"
 #include "packet_dump_file.h"
+
+using namespace std;
 
 void FileDumpPacketAscii(const char* filename, const uchar* buf, int32 size, int32 cols, int32 skip) {
 	ofstream logfile(filename, ios::app);

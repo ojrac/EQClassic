@@ -20,8 +20,8 @@
 #include "entity.h"
 #include "zone.h"
 
-#include <iostream.h>
-#include <iomanip.h>
+#include <iostream>
+#include <iomanip>
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -56,6 +56,8 @@
 #include "spawn2.h"
 #include "zone.h"
 #include "../common/seperator-2.h"
+
+using namespace std;
 
 extern Database database;
 extern Zone* zone;

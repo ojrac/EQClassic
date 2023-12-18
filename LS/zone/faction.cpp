@@ -16,7 +16,7 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 #include "../common/debug.h"
-#include <iostream.h>
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -27,6 +27,8 @@
 #include "../common/database.h"
 #include "client.h"
 #include "zone.h"
+
+using namespace std;
 
 extern Zone* zone;
 extern Database database;

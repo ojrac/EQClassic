@@ -16,7 +16,7 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 	  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 #include "../common/debug.h"
-#include <iostream.h>
+#include <iostream>
 #include <stdlib.h>
 
 #ifdef WIN32
@@ -31,6 +31,8 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 #ifdef WIN32
 #define snprintf	_snprintf
 #endif
+
+using namespace std;
 
 extern Database database;
 

@@ -16,13 +16,13 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 	  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 #include "../common/debug.h"
-#include <iostream.h>
+#include <iostream>
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <signal.h>
 #include <time.h>
-#include <fstream.h>
+#include <fstream>
 #ifdef WIN32
 #include <conio.h>
 #define snprintf	_snprintf
@@ -47,6 +47,8 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 #include "spdat.h"
 #include "../common/packet_dump_file.h"
 #include "parser.h"
+
+using namespace std;
 
 NetConnection		net;
 EntityList			entity_list;

@@ -16,7 +16,7 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 	  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 #include "../common/debug.h"
-#include <iostream.h>
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -46,6 +46,8 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 #include "petitions.h"
 #include "doors.h"
 #include "../common/files.h"
+
+using namespace std;
 
 #ifdef WIN32
 #define snprintf	_snprintf

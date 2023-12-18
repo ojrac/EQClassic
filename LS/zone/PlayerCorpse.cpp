@@ -24,7 +24,7 @@ Child of the Mob class.
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-#include <iostream.h>
+#include <iostream>
 #ifdef WIN32
 #define snprintf	_snprintf
 #define vsnprintf	_vsnprintf
@@ -35,6 +35,8 @@ Child of the Mob class.
 #include "PlayerCorpse.h"
 #include "../common/packet_functions.h"
 #include "../common/crc32.h"
+
+using namespace std;
 
 extern Database database;
 extern EntityList entity_list;

@@ -1,6 +1,8 @@
-#include <iostream.h>
+#include <iostream>
 #include "dbasync.h"
 #include "database.h"
+
+using namespace std;
 
 extern Database database;
 DBAsync*				dbasync = new DBAsync(&database);

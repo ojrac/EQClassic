@@ -19,8 +19,10 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 #include "spawngroup.h"
 #include <string.h>
 #include <stdlib.h>
-#include <iostream.h>
+#include <iostream>
 #include "../common/types.h"
+
+using namespace std;
 
 SpawnEntry::SpawnEntry( uint32 in_NPCType, int in_chance ) 
 {

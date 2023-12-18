@@ -21,7 +21,7 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 #include <stdarg.h>
 #include <ctype.h>
 #include <string.h>
-#include <iostream.h>
+#include <iostream>
 
 #ifdef WIN32
 #include <process.h>
@@ -43,6 +43,8 @@ Copyright (C) 2001-2002  EQEMu Development Team (http://eqemu.org)
 #include "../common/packet_functions.h"
 #include "petitions.h"
 #include "spdat.h"
+
+using namespace std;
 
 #ifdef WIN32
 #define snprintf	_snprintf

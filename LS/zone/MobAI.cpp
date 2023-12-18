@@ -1,5 +1,5 @@
-#include <iostream.h>
-#include <iomanip.h>
+#include <iostream>
+#include <iomanip>
 #include <stdlib.h>
 #include <math.h>
 #include "mob.h"
@@ -10,6 +10,8 @@
 #include "../common/moremath.h"
 #include "parser.h"
 #include "groups.h"
+
+using namespace std;
 
 extern EntityList entity_list;
 extern Database database;
