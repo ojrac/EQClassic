@@ -1532,7 +1532,7 @@ Mob* EntityList::FindDefenseNPC(int32 npcid)
 		}
 		iterator.Advance();
 	}
-	return false;
+	return nullptr;
 }
 
 void EntityList::ListNPCs(Client* client, const char* arg1, const char* arg2, int8 searchtype) {

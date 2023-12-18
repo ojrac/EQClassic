@@ -27,7 +27,7 @@ bool SharedMemory::LoadItems(){
 	if (Database::Instance()->RunQuery(query, strlen(query), errbuf, &result)) {
 		safe_delete(query);
 		row = mysql_fetch_row(result);
-		if (row != 0 && row[0] > 0)
+		if (row != 0 && row[0] != nullptr)
 		{ 
 			getPtr()->max_item = atoi(row[0]);
 			if (getPtr()->max_item >= MAXITEMID) {

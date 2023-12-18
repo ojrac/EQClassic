@@ -1701,7 +1701,7 @@ bool Database::LoadItems()
 	if (RunQuery(query, strlen(query), errbuf, &result)) {
 		safe_delete(query);
 		row = mysql_fetch_row(result);
-		if (row != 0 && row[0] > 0)
+		if (row != 0 && row[0] != nullptr)
 		{ 
 			max_item = atoi(row[0]);
 			item_array = new Item_Struct*[max_item+1];
@@ -2324,7 +2324,7 @@ bool Database::LoadNPCTypes(char* zone_name) {
 	{
 		safe_delete(query);
 		row = mysql_fetch_row(result);
-		if (row != 0 && row > 0 && row[0] != 0)
+		if (row != 0 && row != nullptr && row[0] != 0)
 		{
 			max_npc_type = atoi(row[0]);
 			npc_type_array = new NPCType*[max_npc_type+1];
