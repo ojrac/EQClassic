@@ -70,9 +70,9 @@ type  LO_WORD (type a) {return (a&=0xffff);}
 template <typename type>                    // HI_WORD 
 type  HI_WORD (type a) {return (a&=0xffff0000);} 
 template <typename type>                    // HI_LOSWAPshort
-type  HI_LOSWAPshort (type a) {return (LO_BYTE(a)<<8) | (HI_BYTE(a)>>8);}  
+type  HI_LOSWAPshort (type a) {return (LO_BYTE(a)<<8) | (HI_BYTE(a)>>8);}
 template <typename type>                    // HI_LOSWAPlong
-type  HI_LOSWAPlong (type x) {return (LO_WORD(a)<<16) | (HIWORD(a)>>16);}  
+type  HI_LOSWAPlong (type a) {return (LO_WORD(a)<<16) | (HIWORD(a)>>16);}
 
 EQNetworkServer::EQNetworkServer(int16 iPort) {
 	RunLoop = false;
