@@ -4,6 +4,8 @@
   inputs = {
     # nixpkgs.url = "github:NixOS/nixpkgs/unstable";
     nixpkgs.url = "github:NixOS/nixpkgs/22.11";
+
+    utils.url = "github:numtide/flake-utils";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: inputs.utils.lib.eachSystem [

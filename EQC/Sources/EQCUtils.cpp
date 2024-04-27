@@ -11,7 +11,11 @@
 #include <cmath>
 #include <cstdlib>
 #include <iostream>
+#include <string.h>
+#include <unistd.h>
+#ifdef WIN32
 #include "windows.h"
+#endif
 #include "config.h"
 #include "EQCUtils.hpp"
 #include "EQCException.hpp"

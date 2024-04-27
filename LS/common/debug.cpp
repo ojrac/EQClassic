@@ -1,7 +1,5 @@
 #include "debug.h"
 
-#if 0
-
 // Debug Levels
 ////// File/Console options
 // 0 <= Quiet mode Errors to file Status and Normal ignored
@@ -244,4 +242,3 @@ bool EQEMuLog::Dump(LogIDs id, int8* data, int32 size, int32 cols, int32 skip) {
 	delete ascii;
 	return true;
 }
-#endif

@@ -18,7 +18,7 @@
 #ifndef FACTION_H
 #define FACTION_H
 
-#include "../include/types.h"
+//#include "../include/types.h"
 
 enum FACTION_VALUE {    FACTION_ALLY = 1, FACTION_WARMLY = 2, FACTION_KINDLY = 3, FACTION_AMIABLE = 4,
                         FACTION_INDIFFERENT = 5, FACTION_APPREHENSIVE = 9, FACTION_DUBIOUS = 8,
